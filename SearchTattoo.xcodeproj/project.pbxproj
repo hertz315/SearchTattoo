@@ -8,17 +8,63 @@
 
 /* Begin PBXBuildFile section */
 		E073A2D1294F422A00093F0A /* SearchTattooApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E073A2D0294F422A00093F0A /* SearchTattooApp.swift */; };
-		E073A2D3294F422A00093F0A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E073A2D2294F422A00093F0A /* ContentView.swift */; };
+		E073A2D3294F422A00093F0A /* OnBoardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E073A2D2294F422A00093F0A /* OnBoardingView.swift */; };
 		E073A2D5294F422B00093F0A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E073A2D4294F422B00093F0A /* Assets.xcassets */; };
 		E073A2D8294F422B00093F0A /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E073A2D7294F422B00093F0A /* Preview Assets.xcassets */; };
+		E07B603629507BAA0096469A /* NanumGothic-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E07B603229507BA90096469A /* NanumGothic-ExtraBold.ttf */; };
+		E07B603729507BAA0096469A /* NanumGothic-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E07B603329507BAA0096469A /* NanumGothic-Bold.ttf */; };
+		E07B603829507BAA0096469A /* NanumGothic-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E07B603429507BAA0096469A /* NanumGothic-Regular.ttf */; };
+		E07B603929507BAA0096469A /* OFL.txt in Resources */ = {isa = PBXBuildFile; fileRef = E07B603529507BAA0096469A /* OFL.txt */; };
+		E07B603C29507C8D0096469A /* CheckFonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = E07B603B29507C8D0096469A /* CheckFonts.swift */; };
+		E07B603F29507ECB0096469A /* View+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = E07B603E29507ECB0096469A /* View+Ext.swift */; };
+		E07B6042295080340096469A /* ColorManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E07B6041295080340096469A /* ColorManager.swift */; };
+		E07B6045295082810096469A /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E07B6044295082810096469A /* HomeView.swift */; };
+		E07B604A295083640096469A /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E07B6049295083640096469A /* ViewModel.swift */; };
+		E07B60542951F3440096469A /* TattooistCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E07B60532951F3440096469A /* TattooistCardView.swift */; };
+		E07B60562951F7730096469A /* Roboto-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E07B60552951F7730096469A /* Roboto-Regular.ttf */; };
+		E07B605B295200C60096469A /* DetailTattooistView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E07B605A295200C60096469A /* DetailTattooistView.swift */; };
+		E07B605D295201F20096469A /* BeVietnamPro-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E07B605C295201F20096469A /* BeVietnamPro-ExtraBold.ttf */; };
+		E07B605F2952026B0096469A /* Roboto-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E07B605E2952026B0096469A /* Roboto-Black.ttf */; };
+		E07B606129533F310096469A /* SearchTattooAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = E07B606029533F310096469A /* SearchTattooAPI.swift */; };
+		E07B6064295342490096469A /* Tattooist.swift in Sources */ = {isa = PBXBuildFile; fileRef = E07B6063295342490096469A /* Tattooist.swift */; };
+		E07B6069295374380096469A /* TattooShop.swift in Sources */ = {isa = PBXBuildFile; fileRef = E07B6068295374370096469A /* TattooShop.swift */; };
+		E07B606B295396580096469A /* ContactView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E07B606A295396580096469A /* ContactView.swift */; };
+		E07B606D295399E70096469A /* ContactButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E07B606C295399E70096469A /* ContactButton.swift */; };
+		E07B606F2953A6340096469A /* WebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E07B606E2953A6340096469A /* WebView.swift */; };
+		E07B60712953A8E20096469A /* SafariView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E07B60702953A8E20096469A /* SafariView.swift */; };
+		E07B60742953AC550096469A /* PartialSheet in Frameworks */ = {isa = PBXBuildFile; productRef = E07B60732953AC550096469A /* PartialSheet */; };
+		E07B60772953AF640096469A /* HalfASheet in Frameworks */ = {isa = PBXBuildFile; productRef = E07B60762953AF640096469A /* HalfASheet */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		E073A2CD294F422A00093F0A /* SearchTattoo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SearchTattoo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E073A2D0294F422A00093F0A /* SearchTattooApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchTattooApp.swift; sourceTree = "<group>"; };
-		E073A2D2294F422A00093F0A /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		E073A2D2294F422A00093F0A /* OnBoardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingView.swift; sourceTree = "<group>"; };
 		E073A2D4294F422B00093F0A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E073A2D7294F422B00093F0A /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		E07B603229507BA90096469A /* NanumGothic-ExtraBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NanumGothic-ExtraBold.ttf"; sourceTree = "<group>"; };
+		E07B603329507BAA0096469A /* NanumGothic-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NanumGothic-Bold.ttf"; sourceTree = "<group>"; };
+		E07B603429507BAA0096469A /* NanumGothic-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NanumGothic-Regular.ttf"; sourceTree = "<group>"; };
+		E07B603529507BAA0096469A /* OFL.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = OFL.txt; sourceTree = "<group>"; };
+		E07B603A29507BBB0096469A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		E07B603B29507C8D0096469A /* CheckFonts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckFonts.swift; sourceTree = "<group>"; };
+		E07B603E29507ECB0096469A /* View+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+Ext.swift"; sourceTree = "<group>"; };
+		E07B6041295080340096469A /* ColorManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorManager.swift; sourceTree = "<group>"; };
+		E07B6044295082810096469A /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		E07B6049295083640096469A /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
+		E07B60522951D7680096469A /* DummyLocation.gpx */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = DummyLocation.gpx; sourceTree = "<group>"; };
+		E07B60532951F3440096469A /* TattooistCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TattooistCardView.swift; sourceTree = "<group>"; };
+		E07B60552951F7730096469A /* Roboto-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Regular.ttf"; sourceTree = "<group>"; };
+		E07B605A295200C60096469A /* DetailTattooistView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailTattooistView.swift; sourceTree = "<group>"; };
+		E07B605C295201F20096469A /* BeVietnamPro-ExtraBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "BeVietnamPro-ExtraBold.ttf"; sourceTree = "<group>"; };
+		E07B605E2952026B0096469A /* Roboto-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Black.ttf"; sourceTree = "<group>"; };
+		E07B606029533F310096469A /* SearchTattooAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchTattooAPI.swift; sourceTree = "<group>"; };
+		E07B6063295342490096469A /* Tattooist.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tattooist.swift; sourceTree = "<group>"; };
+		E07B6068295374370096469A /* TattooShop.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TattooShop.swift; sourceTree = "<group>"; };
+		E07B606A295396580096469A /* ContactView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactView.swift; sourceTree = "<group>"; };
+		E07B606C295399E70096469A /* ContactButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactButton.swift; sourceTree = "<group>"; };
+		E07B606E2953A6340096469A /* WebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebView.swift; sourceTree = "<group>"; };
+		E07B60702953A8E20096469A /* SafariView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SafariView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -26,6 +72,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E07B60742953AC550096469A /* PartialSheet in Frameworks */,
+				E07B60772953AF640096469A /* HalfASheet in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -51,8 +99,18 @@
 		E073A2CF294F422A00093F0A /* SearchTattoo */ = {
 			isa = PBXGroup;
 			children = (
+				E07B603A29507BBB0096469A /* Info.plist */,
+				E07B60512951D7500096469A /* Route */,
+				E07B6040295080220096469A /* Manager */,
+				E07B603129507B9B0096469A /* Fonts */,
+				E07B603D29507EAE0096469A /* Extentions */,
+				E07B604B2950846E0096469A /* Components */,
+				E07B604E2950917D0096469A /* API */,
+				E07B606229533FFC0096469A /* Model */,
+				E07B6067295374120096469A /* DataLayer */,
+				E07B6065295351F60096469A /* Views */,
+				E07B6066295351FB0096469A /* ViewModel */,
 				E073A2D0294F422A00093F0A /* SearchTattooApp.swift */,
-				E073A2D2294F422A00093F0A /* ContentView.swift */,
 				E073A2D4294F422B00093F0A /* Assets.xcassets */,
 				E073A2D6294F422B00093F0A /* Preview Content */,
 			);
@@ -65,6 +123,99 @@
 				E073A2D7294F422B00093F0A /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		E07B603129507B9B0096469A /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				E07B605E2952026B0096469A /* Roboto-Black.ttf */,
+				E07B605C295201F20096469A /* BeVietnamPro-ExtraBold.ttf */,
+				E07B60552951F7730096469A /* Roboto-Regular.ttf */,
+				E07B603329507BAA0096469A /* NanumGothic-Bold.ttf */,
+				E07B603229507BA90096469A /* NanumGothic-ExtraBold.ttf */,
+				E07B603429507BAA0096469A /* NanumGothic-Regular.ttf */,
+				E07B603529507BAA0096469A /* OFL.txt */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		E07B603D29507EAE0096469A /* Extentions */ = {
+			isa = PBXGroup;
+			children = (
+				E07B603E29507ECB0096469A /* View+Ext.swift */,
+			);
+			path = Extentions;
+			sourceTree = "<group>";
+		};
+		E07B6040295080220096469A /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				E07B603B29507C8D0096469A /* CheckFonts.swift */,
+				E07B6041295080340096469A /* ColorManager.swift */,
+			);
+			path = Manager;
+			sourceTree = "<group>";
+		};
+		E07B604B2950846E0096469A /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				E07B60532951F3440096469A /* TattooistCardView.swift */,
+				E07B606C295399E70096469A /* ContactButton.swift */,
+				E07B606E2953A6340096469A /* WebView.swift */,
+				E07B60702953A8E20096469A /* SafariView.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		E07B604E2950917D0096469A /* API */ = {
+			isa = PBXGroup;
+			children = (
+				E07B606029533F310096469A /* SearchTattooAPI.swift */,
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
+		E07B60512951D7500096469A /* Route */ = {
+			isa = PBXGroup;
+			children = (
+				E07B60522951D7680096469A /* DummyLocation.gpx */,
+			);
+			path = Route;
+			sourceTree = "<group>";
+		};
+		E07B606229533FFC0096469A /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				E07B6063295342490096469A /* Tattooist.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		E07B6065295351F60096469A /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				E073A2D2294F422A00093F0A /* OnBoardingView.swift */,
+				E07B6044295082810096469A /* HomeView.swift */,
+				E07B605A295200C60096469A /* DetailTattooistView.swift */,
+				E07B606A295396580096469A /* ContactView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		E07B6066295351FB0096469A /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				E07B6049295083640096469A /* ViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		E07B6067295374120096469A /* DataLayer */ = {
+			isa = PBXGroup;
+			children = (
+				E07B6068295374370096469A /* TattooShop.swift */,
+			);
+			path = DataLayer;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -83,6 +234,10 @@
 			dependencies = (
 			);
 			name = SearchTattoo;
+			packageProductDependencies = (
+				E07B60732953AC550096469A /* PartialSheet */,
+				E07B60762953AF640096469A /* HalfASheet */,
+			);
 			productName = SearchTattoo;
 			productReference = E073A2CD294F422A00093F0A /* SearchTattoo.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +266,10 @@
 				Base,
 			);
 			mainGroup = E073A2C4294F422A00093F0A;
+			packageReferences = (
+				E07B60722953AC550096469A /* XCRemoteSwiftPackageReference "PartialSheet" */,
+				E07B60752953AF640096469A /* XCRemoteSwiftPackageReference "HalfASheet" */,
+			);
 			productRefGroup = E073A2CE294F422A00093F0A /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -125,8 +284,15 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E07B603929507BAA0096469A /* OFL.txt in Resources */,
+				E07B60562951F7730096469A /* Roboto-Regular.ttf in Resources */,
+				E07B603629507BAA0096469A /* NanumGothic-ExtraBold.ttf in Resources */,
+				E07B603829507BAA0096469A /* NanumGothic-Regular.ttf in Resources */,
+				E07B605D295201F20096469A /* BeVietnamPro-ExtraBold.ttf in Resources */,
+				E07B605F2952026B0096469A /* Roboto-Black.ttf in Resources */,
 				E073A2D8294F422B00093F0A /* Preview Assets.xcassets in Resources */,
 				E073A2D5294F422B00093F0A /* Assets.xcassets in Resources */,
+				E07B603729507BAA0096469A /* NanumGothic-Bold.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -137,7 +303,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E073A2D3294F422A00093F0A /* ContentView.swift in Sources */,
+				E07B603F29507ECB0096469A /* View+Ext.swift in Sources */,
+				E07B6042295080340096469A /* ColorManager.swift in Sources */,
+				E07B60542951F3440096469A /* TattooistCardView.swift in Sources */,
+				E07B604A295083640096469A /* ViewModel.swift in Sources */,
+				E07B606B295396580096469A /* ContactView.swift in Sources */,
+				E07B605B295200C60096469A /* DetailTattooistView.swift in Sources */,
+				E07B606F2953A6340096469A /* WebView.swift in Sources */,
+				E07B606D295399E70096469A /* ContactButton.swift in Sources */,
+				E07B606129533F310096469A /* SearchTattooAPI.swift in Sources */,
+				E073A2D3294F422A00093F0A /* OnBoardingView.swift in Sources */,
+				E07B6064295342490096469A /* Tattooist.swift in Sources */,
+				E07B6045295082810096469A /* HomeView.swift in Sources */,
+				E07B60712953A8E20096469A /* SafariView.swift in Sources */,
+				E07B603C29507C8D0096469A /* CheckFonts.swift in Sources */,
+				E07B6069295374380096469A /* TattooShop.swift in Sources */,
 				E073A2D1294F422A00093F0A /* SearchTattooApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -270,6 +450,7 @@
 				DEVELOPMENT_TEAM = 7A8HJKU9L3;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = SearchTattoo/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -299,6 +480,7 @@
 				DEVELOPMENT_TEAM = 7A8HJKU9L3;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = SearchTattoo/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -339,6 +521,38 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		E07B60722953AC550096469A /* XCRemoteSwiftPackageReference "PartialSheet" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/AndreaMiotto/PartialSheet";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 3.0.0;
+			};
+		};
+		E07B60752953AF640096469A /* XCRemoteSwiftPackageReference "HalfASheet" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/franklynw/HalfASheet";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		E07B60732953AC550096469A /* PartialSheet */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E07B60722953AC550096469A /* XCRemoteSwiftPackageReference "PartialSheet" */;
+			productName = PartialSheet;
+		};
+		E07B60762953AF640096469A /* HalfASheet */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E07B60752953AF640096469A /* XCRemoteSwiftPackageReference "HalfASheet" */;
+			productName = HalfASheet;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = E073A2C5294F422A00093F0A /* Project object */;
 }

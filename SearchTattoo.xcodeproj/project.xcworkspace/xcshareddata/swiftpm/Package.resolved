@@ -1,0 +1,23 @@
+{
+  "pins" : [
+    {
+      "identity" : "halfasheet",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/franklynw/HalfASheet",
+      "state" : {
+        "revision" : "4f43296b3722082dd5735521ee0fbf25e61cd21c",
+        "version" : "1.0.2"
+      }
+    },
+    {
+      "identity" : "partialsheet",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/AndreaMiotto/PartialSheet",
+      "state" : {
+        "revision" : "318f18bfabd2b2ddf785babd2e53bd593c00a254",
+        "version" : "3.1.0"
+      }
+    }
+  ],
+  "version" : 2
+}

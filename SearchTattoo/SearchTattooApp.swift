@@ -6,12 +6,15 @@
 //
 
 import SwiftUI
+import PartialSheet
 
 @main
 struct SearchTattooApp: App {
+    
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            OnBoardingView()
+              
         }
     }
 }
