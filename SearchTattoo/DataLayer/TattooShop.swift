@@ -8,6 +8,7 @@
 import Foundation
 import CoreLocation
 
+// MARK: - API 응답 데이터 레이어층
 struct TattooShop: Identifiable, Hashable {
     var id = UUID()
     let objectID, phoneNumber: String

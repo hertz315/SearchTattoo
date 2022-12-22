@@ -38,8 +38,6 @@ struct HomeView: View {
                                         .background(Color.black)
                                         .clipShape(Circle())
                                         .shadow(radius: 10)
-                                        
-                            
                         }
                             
                     }
@@ -66,7 +64,7 @@ struct HomeView: View {
 //}
 
 extension HomeView {
-    
+    // MARK: - 바텀 섹션
     var bottomSection: some View {
         VStack(spacing: 10) {
             HStack {

@@ -17,18 +17,16 @@ struct ContactView: View {
         
         VStack(alignment: .leading, spacing: 20) {
             
+            // MARK: - 인스타 사파리뷰 모달 버튼
             Button {
-                viewModel.isInstaSafariView = true
+                let instaUrl = tattooShop.instaURL
+                guard let url = URL(string: instaUrl) else { return }
+                UIApplication.shared.open(url)
             } label: {
                 ContactButton(buttonImage: "인스타", textString: "인스타그램")
             }
-            .sheet(isPresented: $viewModel.isInstaSafariView) {
-                let instaUrl = tattooShop.instaURL
-                let url = URL(string: instaUrl)
-                SafariView(url: url)
-            }
             
-            
+            // MARK: - 카카오오픈 채팅방 사파리뷰 모달
             Button {
                 viewModel.isShowKakaSafariView = true
             } label: {
@@ -40,7 +38,7 @@ struct ContactView: View {
                 SafariView(url: url)
             }
             
-            
+            // MARK: - 전화하기 버튼
             Button {
                 let telephone = "tel://"
                 let numberString = tattooShop.phoneNumber
@@ -51,6 +49,7 @@ struct ContactView: View {
                 ContactButton(buttonImage: "전화", textString: "전화하기")
             }
             
+            // MARK: - 길찾기 버튼
             Button {
                 let latitude = tattooShop.latitude
                 let longitude = tattooShop.longitude

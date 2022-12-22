@@ -17,10 +17,8 @@ enum SearchTattooAPI {
     // MARK: - 전처리
 #if DEBUG // 디버그
     static let baseURL = "https://parseapi.back4app.com/classes/Tattooist"
-    static let imageString = ".png"
 #else // 릴리즈
     static let baseURL = "https://parseapi.back4app.com/classes/Tattooist"
-    static let imageString = ".png"
 #endif
     
     
@@ -61,7 +59,6 @@ enum SearchTattooAPI {
             // Data -> 디코드
             .decode(type: Tattooist.self, decoder: JSONDecoder()) // Tattooist
             .compactMap { $0.results } // [TattooShopResponse]?
-            // MARK: - 📍이부분이 도저희 이해가 가지 않습니다 어떻게 배열이 리턴되나요?
             .map { $0.map {TattooShop($0)} } // TattooShopResponse -> TattooShop
             // mapError로 에러 타입을 변경한다 ⭐️any Error -> SearchTattooAPI.ApiError⭐️
             .mapError { error -> ApiError in

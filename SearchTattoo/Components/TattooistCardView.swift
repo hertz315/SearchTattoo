@@ -17,7 +17,7 @@ struct TattooistCardView: View {
         VStack(alignment: .leading, spacing: 0) {
             Image(tattooShop.profileImageString)
                 .resizable()
-                .scaledToFit()
+                .scaledToFill()
                 .frame(width: 145, height: 114)
             Rectangle()
                 .overlay {

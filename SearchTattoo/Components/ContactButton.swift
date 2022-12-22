@@ -10,7 +10,6 @@ import SwiftUI
 struct ContactButton: View {
     let buttonImage: String
     let textString: String
-//    let tattooShop: TattooShop
     
     var body: some View {
         RoundedRectangle(cornerRadius: 15)

@@ -26,9 +26,9 @@ import _MapKit_SwiftUI
 class ViewModel: NSObject, ObservableObject, CLLocationManagerDelegate {
     
     // MARK: - MapKit Properties
-    @Published var region = MKCoordinateRegion(center: CLLocationCoordinate2D(latitude: 37.469358,
-                                                                              longitude: 126.898333),
-                                               span: MKCoordinateSpan(latitudeDelta: 0.05, longitudeDelta: 0.05))
+    @Published var region = MKCoordinateRegion(center: CLLocationCoordinate2D(latitude: 37.5343925,
+                                                                              longitude: 126.973326),
+                                               span: MKCoordinateSpan(latitudeDelta: 0.2, longitudeDelta: 0.2))
     @Published var trackingMode: MapUserTrackingMode = MapUserTrackingMode.none
     @Published var locationStatus: CLAuthorizationStatus?
     @Published var lastLocation: CLLocation?
@@ -40,8 +40,6 @@ class ViewModel: NSObject, ObservableObject, CLLocationManagerDelegate {
     
     // MARK: - 타투샵 배열
     @Published var tattooShops : [TattooShop] = []
-    // MARK: - 타투샵
-    @Published var tattooShop: TattooShop?
     
     // MARK: - 디테일 모달 상태
     @Published var isShowContactView: Bool = false
@@ -65,7 +63,6 @@ class ViewModel: NSObject, ObservableObject, CLLocationManagerDelegate {
         //위치 정보 승인 요청
         locationManager.requestWhenInUseAuthorization()
         locationManager.delegate = self
-        locationManager.requestWhenInUseAuthorization()
         locationManager.startUpdatingLocation()
         
         self.fetchTattooShopList()
@@ -89,10 +86,7 @@ class ViewModel: NSObject, ObservableObject, CLLocationManagerDelegate {
             .store(in: &subscriptions)
     }
     
-    // MARK: - 타투샵 플레이스 등록
-    
-    
-    // 상태 스트링
+    // MARK: - 로케이션 상태
     var statusString: String {
         guard let status = locationStatus else {
             return "unknown"
@@ -115,11 +109,8 @@ class ViewModel: NSObject, ObservableObject, CLLocationManagerDelegate {
     
     //위치 정보가 업데이트 될 때 호출되는 delegate 함수
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-        //        guard let lastLocation = locations.last else { return }
-        //        self.lastLocation = lastLocation
         guard let firstLocation = locations.first else { return }
         self.currentLocation = firstLocation
-        
         self.currentLocation.map {
             region = MKCoordinateRegion(
                 center: CLLocationCoordinate2D(latitude: $0.coordinate.latitude, longitude: $0.coordinate.longitude),
@@ -134,7 +125,7 @@ class ViewModel: NSObject, ObservableObject, CLLocationManagerDelegate {
     //위치허용 상태가 변경할시 호출되는 함수
     func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
         locationStatus = status
-        print(#function, statusString)
+        
     }
     
     // 에러와 함께 실패할때
@@ -160,8 +151,13 @@ extension ViewModel {
     
     // 현재위치 가져오기
     func updateCurrentLocation(){
+        /// 사용자가 허용권한을 누리지 않으면 허용권한설정하라고 띄우기
+        if self.locationStatus == .denied {
+            self.locationManager.requestWhenInUseAuthorization()
+        }
+        print("⭐️ locationStatus: \(self.statusString)❗️")
         guard let currentLocation = currentLocation else { return }
-        let span = MKCoordinateSpan(latitudeDelta: 0.02, longitudeDelta: 0.02)
+        let span = MKCoordinateSpan(latitudeDelta: 0.05, longitudeDelta: 0.05)
         let updatedMKCoordinateRegion = MKCoordinateRegion(center: currentLocation.coordinate, span: span)
         DispatchQueue.main.async {
             self.region = updatedMKCoordinateRegion
@@ -169,7 +165,6 @@ extension ViewModel {
     }
     
     // MARK: - API 에러처리
-    /// API 에러처리
     /// - Parameter err: API 에러
     func handleError(_ err: Error) {
         

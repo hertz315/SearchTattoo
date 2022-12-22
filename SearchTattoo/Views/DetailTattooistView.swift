@@ -13,17 +13,7 @@ struct DetailTattooistView: View {
     @StateObject var viewModel: ViewModel
     @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
     let tattooShop: TattooShop
-    
-    var btnBack: some View {
-        Button {
-            self.presentationMode.wrappedValue.dismiss()
-        } label: {
-            Image(systemName: "chevron.backward")
-                .aspectRatio(contentMode: .fit)
-                .foregroundColor(.white)
-        }
-        
-    }
+
     
     
     var body: some View {
@@ -117,11 +107,24 @@ struct DetailTattooistView: View {
         }
     }
     
-    fileprivate func showMapNavigation(){
-        if let url = URL(string: "http://maps.apple.com/?daddr=\(37.6433),\(127.0102)") {
-            UIApplication.shared.open(url, options: [:])
+}
+
+
+extension DetailTattooistView {
+   
+    // MARK: - 커스텀 BackButton
+    var btnBack: some View {
+        Button {
+            self.presentationMode.wrappedValue.dismiss()
+        } label: {
+            Image(systemName: "chevron.backward")
+                .aspectRatio(contentMode: .fit)
+                .foregroundColor(.white)
         }
+        
     }
+    
+    
     
 }
 
