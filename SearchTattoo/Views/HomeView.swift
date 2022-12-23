@@ -8,10 +8,12 @@
 import SwiftUI
 import MapKit
 import CoreLocationUI
+import Combine
 
 struct HomeView: View {
     
     @StateObject var viewModel = ViewModel()
+    @State private var annotation = []
     
     //서울 좌표
     
@@ -25,21 +27,19 @@ struct HomeView: View {
                     annotationItems: viewModel.tattooShops) { aTattooShop in
                     
                     MapAnnotation(coordinate: aTattooShop.coordinate) {
-                        
                         NavigationLink {
-                            DetailTattooistView(viewModel: viewModel, tattooShop: aTattooShop)
+                            DetailTattooistView(viewModel: self.viewModel, tattooShop: aTattooShop)
                         } label: {
                             Image(aTattooShop.profileImageString)
-                                        .resizable()
-                                        .frame(width: 44, height: 44)
-                                        .background(.white)
-                                        .clipShape(Circle())
-                                        .padding(3)
-                                        .background(Color.black)
-                                        .clipShape(Circle())
-                                        .shadow(radius: 10)
+                                .resizable()
+                                .frame(width: 44, height: 44)
+                                .background(.white)
+                                .clipShape(Circle())
+                                .padding(3)
+                                .background(Color.black)
+                                .clipShape(Circle())
+                                .shadow(radius: 10)
                         }
-                            
                     }
                     
                 }

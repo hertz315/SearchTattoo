@@ -14,6 +14,8 @@ struct TattooistCardView: View {
     let tattooShop: TattooShop
     
     var body: some View {
+        
+        
         VStack(alignment: .leading, spacing: 0) {
             Image(tattooShop.profileImageString)
                 .resizable()
@@ -47,6 +49,7 @@ struct TattooistCardView: View {
         }
         .frame(width: 145, height: 161)
         .cornerRadius(8)
+
         
     }
 }
