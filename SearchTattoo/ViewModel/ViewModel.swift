@@ -111,6 +111,7 @@ class ViewModel: NSObject, ObservableObject, CLLocationManagerDelegate {
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         guard let firstLocation = locations.first else { return }
         self.currentLocation = firstLocation
+        
         self.currentLocation.map {
             region = MKCoordinateRegion(
                 center: CLLocationCoordinate2D(latitude: $0.coordinate.latitude, longitude: $0.coordinate.longitude),
@@ -118,6 +119,8 @@ class ViewModel: NSObject, ObservableObject, CLLocationManagerDelegate {
             )
             currentLocation = $0
         }
+        
+        
         print(#function, firstLocation)
         manager.stopUpdatingLocation()
     }

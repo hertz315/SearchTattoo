@@ -44,7 +44,7 @@ struct OnBoardingView: View {
                                 .font(.custom("NanumGothicBold", size: 16))
                         )
                         .padding(.horizontal, 16)
-                        .padding(.bottom, 48)
+                        .padding(.bottom, 85)
                         
                 }
                 .fullScreenCover(isPresented: $isStartButtonTapped) {

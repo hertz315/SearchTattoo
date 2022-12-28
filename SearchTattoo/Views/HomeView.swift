@@ -14,6 +14,19 @@ struct HomeView: View {
     
     @StateObject var viewModel = ViewModel()
     @State private var annotation = []
+    private var region : Binding<MKCoordinateRegion> {
+            
+        Binding {
+                
+            viewModel.region
+                
+        } set: { region in
+                
+            DispatchQueue.main.async {
+                viewModel.region = region
+            }
+        }
+    }
     
     //서울 좌표
     
@@ -21,7 +34,7 @@ struct HomeView: View {
         NavigationView {
             ZStack(alignment: .bottomTrailing) {
                 // 맵
-                Map(coordinateRegion: $viewModel.region,
+                Map(coordinateRegion: region,
                     showsUserLocation: true,
                     userTrackingMode: $viewModel.trackingMode,
                     annotationItems: viewModel.tattooShops) { aTattooShop in
@@ -40,9 +53,12 @@ struct HomeView: View {
                                 .clipShape(Circle())
                                 .shadow(radius: 10)
                         }
+                        
                     }
                     
                 }
+              
+                    
                 
                 bottomSection
             }
@@ -53,6 +69,7 @@ struct HomeView: View {
         .onAppear {
             viewModel.updateCurrentLocation()
         }
+        
         
     }
 }
@@ -114,3 +131,15 @@ extension HomeView {
         
     }
 }
+
+//extension View {
+//    func sync(_ published: Binding<MKCoordinateRegion>, with binding: Binding<MKCoordinateRegion>) -> some View {
+//        self
+//            .onChange(of: published.wrappedValue) { published in
+//                binding.wrappedValue = published
+//            }
+//            .onChange(of: binding.wrappedValue) { binding in
+//                published.wrappedValue = binding
+//            }
+//    }
+//}
